@@ -1,6 +1,5 @@
-package com.ll.domain.product.product.entity;
+package com.ll.domain.member.member.entity;
 
-import com.ll.domain.member.member.entity.Member;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,15 +10,13 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class Product {
+public class Member {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
-    private String name;
-    private int price;
-    private int stockQuantity;
-    private Member owner;
+    private String username;
+    private String password;
 }
